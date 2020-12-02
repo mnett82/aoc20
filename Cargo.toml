@@ -3,7 +3,8 @@
 [package]
 authors = ["Michael Nett <mnett82@gmail.com>"]
 edition = "2018"
-name = "problem1"
+name = "aoc20"
+publish = false
 version = "0.1.0"
 
 [dependencies]
