@@ -1,11 +1,9 @@
 fn count_trees(map: &[&str], dx: usize, dy: usize) -> usize {
-    let cols = map.iter().next().unwrap().len();
-
     map.iter()
         .cloned()
         .step_by(dy)
         .enumerate()
-        .filter(|&(row, trees)| trees.as_bytes()[(row * dx) % cols] == '#' as u8)
+        .filter(|&(step, trees)| trees.as_bytes()[(step * dx) % trees.len()] == '#' as u8)
         .count()
 }
 
